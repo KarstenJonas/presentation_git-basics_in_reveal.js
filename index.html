@@ -7,7 +7,7 @@
 	<title>Sample RevealJS with CDN</title>
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/league.css">
 	
 	<link rel="stylesheet" href="index.css">
 </head>
@@ -15,8 +15,121 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
+			<!-- Section 1 -->
 			<section>
-				Slide1		
+				<h2>Git - Grundlagen</h2>
+				<img src="Git-Icon-1788C.png" alt="GitHub Logo">
+			</section>
+			
+			<!-- Section 2 -->
+			<section>
+				<!-- Inhaltsverzeichnis -->
+				<section>
+					<h2>Versionsverwaltung</h2>
+					<h5>Was ist Versionsverwaltung?</h2>
+					
+					<ul>
+						<li>Protokollierung von Änderungen an Dateien über die Zeit</li>
+						<li>Möglichkeit zur Rückkehr zu bestimmten Versionen</li>
+					
+						<li><a href="#VCS">Version Control System (VCS)</a></li>
+						<li><a href="#CVCS">Centralized Version Control System (CVCS)</a></li>
+						<li><a href="#DVCS">Distributed Version Control System (DVCS)</a></li>
+					</ul>
+				</section>
+				<!-- VCS -->
+				<section id="VCS">
+					<h2>Lokale Versionsverwaltung</h2>
+					<ul>
+						<li>Alle Dateien in ein separates Verzeichnis kopieren</li>
+						<li>Flexible Versionierung ohne Serverabhängigkeit</li>
+    					<li>Minimiertes Risiko von Datenverlust bei zentralen Serverausfällen</li>
+					</ul>
+					<img src="local.png" alt="Lokale Versionsverwaltung" style="width: 50%; margin-left: 20px;">
+				</section>
+				<section>
+					<h2>Probleme mit VCS</h2>
+					<ul>						
+						<li>Verbreitet aber fehleranfällig</li>
+						<li>Risiko von Arbeiten im falschen Verzeichnis</li>
+						<li>Überschreiben von Dateien, die nicht überschrieben werden sollten</li>
+						<li>Zusammenarbeit auf verschiedenen Systemen</li>
+					</ul>
+				</section>
+				<!-- CVCS -->
+				<section id="CVCS">
+					<h2>Zentrale Versionsverwaltung</h2>
+					<ul>
+						<li>Basiert auf einem zentralen Server</li>
+						<li>Transparenz über Projekttätigkeiten der Beteiligten</li>
+						<li>Genau definierte Administratorrechte</li>
+						<li>Einfachere Administration im Vergleich zu lokalen Systemen</li>												
+					</ul>
+					<img src="centralized.png" alt="Zentrale Versionsverwaltung" style="width: 50%; margin-left: 20px;">			  
+				</section>
+				<section>
+					<h2>Probleme mit CVCS</h2>
+					<ul>						
+						<li>Risiko eines Systemausfalls bei Serverausfall</li>
+						<li>Keine Zusammenarbeit oder Versionierung bei Serverausfall</li>
+						<li>Risiko von Datenverlust bei beschädigter Serverfestplatte</li>
+    				</ul>
+				</section>
+				<!-- DVCS -->
+				<section id="DVCS" style="align-items: center; text-align: center;">
+					<h2>Verteilte Versionsverwaltung</h2>
+					<ul>
+						<li>Vollständige lokale Kopie für unabhängige Arbeitsumgebung</li>
+						<li>Dezentrale Sicherung (Clone) als Backup</li>
+						<li>Unabhängigkeit von Serverzustand ermöglicht offline zu arbeiten</li>
+					</ul>                      
+					<img src="distributed.png" alt="Verteilte Versionsverwaltung" style="width: 45%; margin-top: 10px;">
+				</section>
+				<section>
+					<h2>Probleme mit DVCS</h2>
+					<ul>
+						<li>Komplexität für Anfänger erschwert die Einarbeitung in die Konzepte von DVCS.</li>
+						<li>Potenziell größere Repositorygrößen bei vielen erstellten Klones.</li>
+						<li>Notwendigkeit der Versionskontrolle, um sicherzustellen, dass alle Änderungen eingespielt werden.</li>						
+						<li>Komplexe Arbeitsabläufe erfordern Erfahrung und können für unerfahrene Nutzer überwältigend sein.</li>
+					</ul>
+				</section>
+			  </section>
+
+			<!-- Section 3 -->
+			<section style="display: flex; align-items: center;">
+				<div>
+					<h2>Versionskontrolle mit Git</h2>
+					<ul>
+						<li>Verteiltes Versionsverwaltungssystem</li>
+						<li>Entwickelt von Linus Thorvalds im Jahr 2005</li>
+						<li>Unter der GNU-GPLv2-Lizenz veröffentlicht</li>
+					</ul>
+				</div>
+				<img src="LT.jpg" alt="Linus Thorvald" style="width: 25%; margin-left: 20px;">
+			</section>
+			
+			<!-- Section 4 -->
+			<section>
+				<h3>Warum Versionskontrolle wichtig ist?</h3>
+				<ul>
+					<li>Effiziente Zusammenarbeit: Ermöglicht mehreren Personen, gleichzeitig an einem Projekt zu arbeiten.</li>
+					<li>Rückverfolgbarkeit: Verfolgt Änderungen und ermöglicht die Rückkehr zu früheren Versionen.</li>
+					<li>Fehlerbehebung: Vereinfacht das Auffinden und Beheben von Fehlern im Code.</li>
+					<li>Dokumentation: Protokolliert den Verlauf des Projekts und dient als Dokumentation.</li>
+					<li>Teamarbeit: Unterstützt die Koordination von Teammitgliedern und deren Beiträgen.</li>
+				</ul>
+				<img src="kisspng-git-project-branching-version-control-github-push-pull.png" alt="Hier sollte ein Bild sein" style="width: 50%; margin-left: 20px;">
+			</section>	
+
+			<!-- Section 5 -->	
+			<section>
+				<iframe width="1280" height="720" src="https://www.youtube.com/embed/-Bfx-v5mIDo" title="How to install Git on Windows 10 (2023)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</section>
+			
+			<!-- Section 6 -->
+			<section>
+				<iframe width="1280" height="720" src="https://www.youtube.com/embed/yDntCIs-IJM" title="Git Config Our Username and Email" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</section>
 		</div>
 	</div>
